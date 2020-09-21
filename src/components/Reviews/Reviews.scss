@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+.rewiews {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.reviews__content {
+    width: $page-content-width;
+    padding: 140px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.review {
+    background-color: #ebebeb;
+    padding: 45px;
+}
+
+.review__text {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 30px;
+    height: 200px;
+    overflow-y: hidden;
+    text-align: justify;
+}
+
+.review__customer-container {
+    display: flex;
+    align-items: center;
+}
+
+.review__customer-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 35px;
+}
+
+.review__customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.review__customer-name {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review__customer-company {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    color: #4f4f4f;
+}

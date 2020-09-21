@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.about-us__content {
+    width: $page-content-width;
+    display: flex;
+    flex-direction: column;
+    padding: 140px 0;
+}
+
+.about-us__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-us__company-info {
+    width: 40%;
+}
+
+.about-us__company-name {
+    color: #005fa3;
+}
+
+.about-us__company-description {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 60px;
+    text-align: justify;
+}
+
+.about-us__company-achievements {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-us__achievement {
+    width: 250px;
+    height: 250px;
+    background-color: #ebebeb;
+    margin-bottom: 30px;
+    padding: 30px;
+
+    transition: background-color 0.3s ease-in;
+}
+
+.about-us__achievement:hover {
+    background-color: #005fa3;
+    color: white;
+
+    .about-us__achievement-link {
+        color: white;
+    }
+}
+
+.about-us__achievement-link {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #005fa3;
+
+    transition: color 0.3s ease-in;
+}
+
+.about-us__achievement-header {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.about-us__achievement-text {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 40px;
+}

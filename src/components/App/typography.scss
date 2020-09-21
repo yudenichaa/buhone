@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+.h1 {
+    font-family: "Merriweather", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: #bdbdbd;
+    margin-bottom: 40px;
+}
+
+.h3 {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: #333333;
+    margin-bottom: 100px;
+    line-height: 70px;
+}

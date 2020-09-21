@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.footer {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_content {
+    width: $page-content-width;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_paragraph {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}

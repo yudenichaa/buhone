@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.clients {
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+}
+
+.clients__content {
+    width: $page-content-width;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.clients__logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-logo {
+    width: 22%;
+    height: 200px;
+    object-fit: contain;
+}

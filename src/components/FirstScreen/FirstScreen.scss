@@ -1,0 +1,58 @@
+@import "../../variables.scss";
+
+.first-screen {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("./assets/background.jpg");
+    background-size: cover;
+}
+
+.first-screen__content {
+    width: $page-content-width;
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-screen__header {
+    font-family: "Merriweather", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    height: 120px;
+    overflow-y: hidden;
+    color: #ffffff;
+    width: 600px;
+    margin-bottom: 80px;
+}
+
+.first-screen__action_button {
+    width: 270px;
+    height: 60px;
+    background-color: rgb(0, 95, 163);
+    border: none;
+    outline: none;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in;
+}
+
+.first-screen__action_button:hover {
+    background-color: rgb(3, 114, 194);
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel__content {
+    display: flex;
+    transition: transform 0.3s linear;
+}
+
+.carousel__item {
+    min-width: 100%;
+}

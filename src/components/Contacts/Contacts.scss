@@ -1,0 +1,133 @@
+@import "../../variables.scss";
+
+.contacts {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("./assets/background.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contacts__content {
+    width: $page-content-width;
+    padding: 140px 0;
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.contacts__info {
+    width: 45%;
+}
+
+.contacts__header {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 60px;
+    line-height: 0;
+}
+
+.contacts__paragraph {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 80px;
+}
+
+.feedback-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-info__item {
+    display: flex;
+    align-self: center;
+}
+
+.feedback-info__text {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 29px;
+    margin-left: 16px;
+}
+
+.contacts-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.user-info__column {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.contacts-form__user-message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contacts-form__label {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contacts-form__text-input {
+    background-color: transparent;
+    padding-bottom: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    height: 35px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+    color: white;
+}
+
+.contacts-form__message-input {
+    height: 100px;
+    background-color: transparent;
+    padding-bottom: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+    color: white;
+    resize: none;
+    margin-bottom: 50px;
+}
+
+.contacts-form__submit-button {
+    width: 270px;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-family: "Lato" sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    align-self: flex-end;
+    background-color: rgb(0, 95, 163);
+    transition: background-color 0.2s ease-in;
+}
+
+.contacts-form__submit-button:hover {
+    background-color: rgb(3, 114, 194);
+}

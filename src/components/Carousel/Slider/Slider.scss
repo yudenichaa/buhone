@@ -1,0 +1,50 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__pagination {
+    display: flex;
+    align-items: flex-end;
+}
+
+.slider__pagination-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.slider__pagination-item:last-child {
+    margin-right: 0;
+}
+
+.slider__buttons {
+    display: flex;
+}
+
+.slider-button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.slider-button__background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__button-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

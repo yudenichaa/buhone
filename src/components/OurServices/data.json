@@ -1,0 +1,28 @@
+{
+    "services": [
+        {
+            "imageURL": "https://picsum.photos/350/360",
+            "title": "Бухгалтерское обслуживание"
+        },
+        {
+            "imageURL": "https://picsum.photos/350/361",
+            "title": "Бухгалтерское обслуживание"
+        },
+        {
+            "imageURL": "https://picsum.photos/350/362",
+            "title": "Бухгалтерское обслуживание"
+        },
+        {
+            "imageURL": "https://picsum.photos/350/363",
+            "title": "Бухгалтерское обслуживание"
+        },
+        {
+            "imageURL": "https://picsum.photos/350/364",
+            "title": "Бухгалтерское обслуживание"
+        },
+        {
+            "imageURL": "https://picsum.photos/350/365",
+            "title": "Бухгалтерское обслуживание"
+        }
+    ]
+}

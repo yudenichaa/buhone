@@ -1,0 +1,9 @@
+.carousel {
+    overflow: hidden;
+}
+
+.carousel__content {
+    display: flex;
+    transition: transform 0.3s linear;
+    margin-bottom: 70px;
+}
