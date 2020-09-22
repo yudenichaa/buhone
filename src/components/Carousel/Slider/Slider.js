@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Slider.scss";
 import backButtonImage from "./assets/back-button.svg";
 import nextButtonImage from "./assets/next-button.svg";
@@ -10,6 +10,11 @@ export default function Slider({
     colorOnHover,
 }) {
     const [activePaginationItem, setActivePaginationItem] = useState(0);
+
+    useEffect(() => {
+        setActivePaginationItem(0);
+        onActiveItemChanged(0);
+    }, [paginationItemsCount]);
 
     const onNextButtonClicked = () => {
         const nextActivePaginationItem =
