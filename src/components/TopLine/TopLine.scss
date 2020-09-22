@@ -9,7 +9,6 @@ $breakpoint-extra-large: 1320px;
 }
 
 .top-line__content {
-    width: $page-content-width;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +59,7 @@ $breakpoint-extra-large: 1320px;
 }
 
 .top-line__info {
-    display: flex; 
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
@@ -74,7 +73,7 @@ $breakpoint-extra-large: 1320px;
 .top-line__info-item {
     display: flex;
     justify-content: center;
-    
+
     width: 100%;
     margin-bottom: 0.5rem;
 
