@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@import "../../variables.scss", "../../mixins.scss";
 
 .first-screen {
     display: flex;
@@ -7,37 +7,53 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("./assets/background.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .first-screen__content {
-    width: $page-content-width;
-    padding: 150px 0;
     display: flex;
     flex-direction: column;
+
+    @include block-content;
 }
 
 .first-screen__header {
     font-family: "Merriweather", sans-serif;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 60px;
-    height: 120px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    height: 6rem;
     overflow-y: hidden;
     color: #ffffff;
-    width: 600px;
-    margin-bottom: 80px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+    @media screen and (min-width: map-get($breakpoints, "extra-small")) {
+        font-size: 3rem;
+        line-height: 3.75rem;
+        height: 7.5rem;
+        width: 36rem;
+        margin-bottom: 5rem;
+    }
 }
 
 .first-screen__action_button {
-    width: 270px;
-    height: 60px;
     background-color: rgb(0, 95, 163);
     border: none;
     outline: none;
     font-family: "Lato", sans-serif;
-    font-size: 18px;
     color: #ffffff;
     transition: background-color 0.2s ease-in;
+
+    width: 13.5rem;
+    height: 3rem;
+    font-size: 1rem;
+
+    @media screen and (min-width: map-get($breakpoints, "extra-small")) {
+        font-size: 1.125rem;
+        width: 16.875rem;
+        height: 3.75rem;
+    }
 }
 
 .first-screen__action_button:hover {

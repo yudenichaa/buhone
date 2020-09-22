@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+@mixin block-content {
+    width: 95vw;
+    padding: 4rem 0;
+
+    @media screen and (min-width: map-get($breakpoints, "extra-small")) {
+        width: 90vw;
+        padding: 5rem 0;
+    }
+    @media screen and (min-width: map-get($breakpoints, "small")) {
+        width: 80vw;
+        padding: 6rem 0;
+    }
+    @media screen and (min-width: map-get($breakpoints, "medium")) {
+        width: 75vw;
+        padding: 7rem 0;
+    }
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+        width: 70vw;
+        padding: 8rem 0;
+    }
+    @media screen and (min-width: map-get($breakpoints, "extra-large")) {
+        width: 60vw;
+        padding: 9rem 0;
+    }
+}

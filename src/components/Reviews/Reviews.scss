@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@import "../../variables.scss", "../../mixins.scss";
 
 .rewiews {
     background-color: #f9f9f9;
@@ -7,26 +7,59 @@
 }
 
 .reviews__content {
-    width: $page-content-width;
-    padding: 140px 0;
     display: flex;
     flex-direction: column;
+
+    @include block-content;
 }
 
 .review {
     background-color: #ebebeb;
-    padding: 45px;
+    padding: 1.3rem;
+
+    @media screen and (min-width: map-get($breakpoints, "extra-small")) {
+        padding: 1.6rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "small")) {
+        padding: 1.9rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "medium")) {
+        padding: 2.2rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+        padding: 2.5rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "extra-large")) {
+        padding: 2.8rem;
+    }
 }
 
 .review__text {
     font-family: "Lato", sans-serif;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 25px;
-    margin-bottom: 30px;
-    height: 200px;
-    overflow-y: hidden;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.875rem;
     text-align: justify;
+    overflow-y: auto;
+
+    height: 17.5rem;
+
+    @media screen and (min-width: map-get($breakpoints, "extra-small")) {
+        height: 16.5rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "small")) {
+        height: 15.5rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "medium")) {
+        height: 14.5rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+        height: 13.5rem;
+    }
+    @media screen and (min-width: map-get($breakpoints, "extra-large")) {
+        height: 12.5rem;
+    }
 }
 
 .review__customer-container {
@@ -35,11 +68,11 @@
 }
 
 .review__customer-image {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 35px;
+    margin-right: 2rem;
 }
 
 .review__customer-info {
@@ -50,12 +83,12 @@
 .review__customer-name {
     font-family: "Lato", sans-serif;
     font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
 }
 
 .review__customer-company {
     font-family: "Lato", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #4f4f4f;
 }

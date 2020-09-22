@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@import "../../variables.scss", "../../mixins.scss";
 
 .clients {
     background-color: #ebebeb;
@@ -7,10 +7,10 @@
 }
 
 .clients__content {
-    width: $page-content-width;
-    padding: 100px 0;
     display: flex;
     flex-direction: column;
+
+    @include block-content;
 }
 
 .clients__logos {
@@ -19,7 +19,6 @@
 }
 
 .client-logo {
-    width: 22%;
-    height: 200px;
+    max-height: 12.5rem;
     object-fit: contain;
 }

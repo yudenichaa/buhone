@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "../Carousel";
 import "./OurClients.scss";
 import data from "./data.json";
 
-export default function OurClients({ clientsPerPage = 4 }) {
+export default function OurClients() {
+    const clientsPerPage = useMedia(
+        ["(min-width: 1600px)", "(min-width: 1200px)", "(min-width: 768px)"],
+        [4, 3, 2],
+        1
+    );
+
     const clients = [];
     for (
         let page = 0;
@@ -22,6 +28,9 @@ export default function OurClients({ clientsPerPage = 4 }) {
                 <img
                     key={clientIndex}
                     className="client-logo"
+                    style={{
+                        width: `${100 / clientsPerPage - 1}%`,
+                    }}
                     src={data.clients[clientIndex].imageURL}
                 />
             );
@@ -48,3 +57,43 @@ export default function OurClients({ clientsPerPage = 4 }) {
         </div>
     );
 }
+
+function useMedia(queries, values, defaultValue) {
+    const [mediaQueryLists] = useState(
+        queries.map((q) => window.matchMedia(q))
+    );
+
+    const [_, forceUpdate] = useState();
+    const updateNeeded = () => forceUpdate({});
+
+    useEffect(() => {
+        mediaQueryLists.forEach((mql) => mql.addListener(updateNeeded));
+        return () =>
+            mediaQueryLists.forEach((mql) => mql.removeListener(updateNeeded));
+    }, []);
+
+    const index = mediaQueryLists.findIndex((mql) => mql.matches);
+    return typeof values[index] !== "undefined" ? values[index] : defaultValue;
+}
+
+// function useMedia(queries, values, defaultValue) {
+//     const mediaQueryLists = queries.map((q) => window.matchMedia(q));
+
+//     const getValue = () => {
+//         const index = mediaQueryLists.findIndex((mql) => mql.matches);
+//         return typeof values[index] !== "undefined"
+//             ? values[index]
+//             : defaultValue;
+//     };
+
+//     const [value, setValue] = useState(getValue);
+
+//     useEffect(() => {
+//         const handler = () => setValue(getValue);
+//         mediaQueryLists.forEach((mql) => mql.addListener(handler));
+//         return () =>
+//             mediaQueryLists.forEach((mql) => mql.removeListener(handler));
+//     }, []);
+
+//     return value;
+// }

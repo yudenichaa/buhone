@@ -38,18 +38,21 @@ export default function Slider({
     const paginationItems = new Array(paginationItemsCount)
         .fill()
         .map((_, index) => (
-            <div
-                key={index}
-                className="slider__pagination-item"
-                style={{
-                    backgroundColor:
-                        activePaginationItem == index ? colorOnHover : color,
-                }}
-                onMouseOver={(event) => {
-                    event.target.style.opacity = "1";
-                }}
-                onClick={() => onPaginationItemClicked(index)}
-            />
+            <div key={index} className="slider__pagination-item-container">
+                <div
+                    className="slider__pagination-item"
+                    style={{
+                        backgroundColor:
+                            activePaginationItem == index
+                                ? colorOnHover
+                                : color,
+                    }}
+                    onMouseOver={(event) => {
+                        event.target.style.opacity = "1";
+                    }}
+                    onClick={() => onPaginationItemClicked(index)}
+                />
+            </div>
         ));
 
     const [backButtonHover, setBackButtonHover] = useState(false);
